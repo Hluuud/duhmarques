@@ -29,66 +29,66 @@ import {
 export function Skills() {
   const skillCategories = [
     {
-      title: "Automação Industrial",
-      skills: [
-        { name: "Node-RED", icon: <Network className="w-6 h-6" /> },
-        { name: "n8n", icon: <GitBranch className="w-6 h-6" /> },
-        { name: "IoT", icon: <Cpu className="w-6 h-6" /> },
-        { name: "MQTT", icon: <Server className="w-6 h-6" /> },
-        { name: "CLPs / Ladder", icon: <Settings className="w-6 h-6" /> },
-        { name: "Robótica", icon: <Bot className="w-6 h-6" /> },
-      ],
-    },
-    {
       title: "Infraestrutura & Cloud",
       skills: [
-        { name: "Azure", icon: <Cloud className="w-6 h-6" /> },
-        { name: "Docker", icon: <Container className="w-6 h-6" /> },
-        { name: "Linux", icon: <Terminal className="w-6 h-6" /> },
+        { name: "Azure & ADDS", icon: <Cloud className="w-6 h-6" /> },
+        { name: "Docker & Kubernetes", icon: <Container className="w-6 h-6" /> },
+        { name: "Linux & Windows Server", icon: <Terminal className="w-6 h-6" /> },
         { name: "Traefik", icon: <Lock className="w-6 h-6" /> },
         { name: "Ngrok", icon: <Network className="w-6 h-6" /> },
         { name: "VMs & Containers", icon: <Boxes className="w-6 h-6" /> },
       ],
     },
+        {
+      title: "Dados & IA",
+      skills: [
+        { name: "Machine Learning", icon: <Brain className="w-6 h-6" /> },
+        { name: "Regressão & Modelagem", icon: <LineChart className="w-6 h-6" /> },
+        { name: "LLM & PLN", icon: <BarChart3 className="w-6 h-6" /> },
+        { name: "RAG", icon: <Cloud className="w-6 h-6" /> },
+        { name: "Chatbots", icon: <Database className="w-6 h-6" /> },
+        { name: "Banco de dados", icon: <Database className="w-6 h-6" /> },
+      ],
+    },
+        {
+      title: "Automação",
+      skills: [
+        { name: "Node-RED", icon: <Network className="w-6 h-6" /> },
+        { name: "N8N", icon: <GitBranch className="w-6 h-6" /> },
+        { name: "Power Automate", icon: <Cpu className="w-6 h-6" /> },
+        { name: "MQTT", icon: <Server className="w-6 h-6" /> },
+        { name: "Ladder", icon: <Bot className="w-6 h-6" /> },
+        { name: "CLPs", icon: <Settings className="w-6 h-6" /> },
+      ],
+    },
     {
       title: "Segurança & Redes",
       skills: [
-        { name: "Fortinet", icon: <Shield className="w-6 h-6" /> },
-        { name: "Firewall & VLANs", icon: <Network className="w-6 h-6" /> },
-        { name: "Ubiquiti", icon: <Wifi className="w-6 h-6" /> },
-        { name: "VPNs", icon: <Lock className="w-6 h-6" /> },
+        { name: "Firewall", icon: <Shield className="w-6 h-6" /> },
+        { name: "VLANs & VPNs", icon: <Lock className="w-6 h-6" /> },
+        { name: "Segmentação de redes", icon: <Wifi className="w-6 h-6" /> },
+        { name: "Modelo OSI", icon: <Server className="w-6 h-6" /> },
         { name: "CFTV", icon: <Camera className="w-6 h-6" /> },
-        { name: "Intune", icon: <Server className="w-6 h-6" /> },
+      ],
+    },
+      {
+      title: "Programação & Scripts",
+      skills: [
+        { name: "Python", icon: <Code className="w-6 h-6" /> },
+        { name: "JavaScript", icon: <GitBranch className="w-6 h-6" /> },
+        { name: "Bash", icon: <Terminal className="w-6 h-6" /> },
+        { name: "PowerShell", icon: <Zap className="w-6 h-6" /> },
+        { name: "APIs REST & Webhooks", icon: <Network className="w-6 h-6" /> },       
       ],
     },
     {
       title: "Softwares & Gestão",
       skills: [
-        { name: "Git / GitHub", icon: <Github className="w-6 h-6" /> },
-        { name: "VSCode", icon: <FileCode className="w-6 h-6" /> },
+        { name: "Git & GitHub", icon: <Github className="w-6 h-6" /> },
+        { name: "Ansible", icon: <FileCode className="w-6 h-6" /> },
         { name: "Grafana", icon: <BarChart3 className="w-6 h-6" /> },
-        { name: "Prometheus", icon: <Database className="w-6 h-6" /> },
+        { name: "Terraform", icon: <Database className="w-6 h-6" /> },
         { name: "Zabbix", icon: <Shield className="w-6 h-6" /> },
-      ],
-    },
-    {
-      title: "Programação & Scripts",
-      skills: [
-        { name: "Python", icon: <Code className="w-6 h-6" /> },
-        { name: "Bash", icon: <Terminal className="w-6 h-6" /> },
-        { name: "PowerShell", icon: <Zap className="w-6 h-6" /> },
-        { name: "APIs REST / Webhooks", icon: <Network className="w-6 h-6" /> },
-        { name: "Automação", icon: <GitBranch className="w-6 h-6" /> },
-      ],
-    },
-    {
-      title: "Dados & IA",
-      skills: [
-        { name: "Machine Learning", icon: <Brain className="w-6 h-6" /> },
-        { name: "Ciência de Dados", icon: <BarChart3 className="w-6 h-6" /> },
-        { name: "Regressão & Modelagem", icon: <LineChart className="w-6 h-6" /> },
-        { name: "PostgreSQL", icon: <Database className="w-6 h-6" /> },
-        { name: "Supabase", icon: <Cloud className="w-6 h-6" /> },
       ],
     },
   ]
