@@ -25,16 +25,20 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Sou <span className="text-accent font-semibold">Luiz Eduardo Marques</span>, profissional de tecnologia
-              focado em automação de processos, Indústria 4.0 e integração entre TI e OT.
+              Sou <span className="text-accent font-semibold">Luiz Eduardo Marques</span>, profissional de tecnologia especializado em 
+              automação, DevOps e integração entre sistemas.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Tenho experiência com infraestrutura, redes, cloud, segurança da informação e projetos de automação
-              utilizando IoT e sistemas industriais.
+              Atuo no desenvolvimento de soluções escaláveis voltadas para automação de processos, observabilidade, infraestrutura
+              como código e integração entre ambientes, utilizando práticas modernas de DevOps e automações.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Minha missão é transformar processos complexos em soluções eficientes e escaláveis, conectando o mundo
-              físico ao digital através da tecnologia.
+              Tenho experiência com infraestrutura, redes, cloud computing, segurança da informação, containers, automações com IoT
+              e workflows inteligentes, sempre buscando aumentar eficiência operacional, confiabilidade e escalabilidade dos ambientes.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Minha missão é transformar operações complexas em ecossistemas automatizados, resilientes e inteligentes, conectando 
+              tecnologia, infraestrutura e automação para acelerar resultados.
             </p>
 
             <motion.div

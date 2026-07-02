@@ -1,41 +1,40 @@
 "use client"
 
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Terminal as TerminalIcon } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Projects() {
   const projects = [
     {
-      title: "Monitoramento IoT com Node-RED e Grafana",
+      title: "Smart Monitoring & Auto-Healing Platform",
       description:
-        "Sistema completo de monitoramento em tempo real de sensores industriais com dashboards interativos.",
-      image: "/industrial-iot-dashboard-grafana.jpg",
-      tags: ["Node-RED", "Grafana", "MQTT", "InfluxDB"],
-      github: "https://github.com",
-      demo: "https://demo.com",
-    },
-    {
-      title: "Automação de Backup em Servidor Linux",
-      description: "Scripts automatizados para backup incremental e sincronização de dados críticos em servidores.",
-      image: "/linux-server-automation-terminal.jpg",
-      tags: ["Bash", "Linux", "Cron", "Rsync"],
-      github: "https://github.com",
+        "Plataforma de observabilidade containerizada que integra Zabbix, Prometheus e Grafana para monitoramento de infraestrutura e coleta de métricas, com automações via n8n que respondem a incidentes sozinhas — reiniciando serviços com falha e disparando alertas sem intervenção manual. Todo o stack sobe com um único docker-compose up -d.",
+      tags: ["Docker", "Zabbix", "Prometheus", "Grafana", "n8n"],
+      github: "https://github.com/Hluuud/Smart-Monitoring",
       demo: null,
     },
     {
-      title: "Sistema de Controle de Produção",
-      description: "Plataforma web para controle e monitoramento de linha de produção com comunicação MQTT.",
-      image: "/industrial-production-control-system.jpg",
-      tags: ["Python", "MQTT", "Flask", "PostgreSQL"],
-      github: "https://github.com",
-      demo: "https://demo.com",
+      title: "TalentHub",
+      description:
+        "Plataforma de gestão de talentos e recrutamento, com dashboards interativos para acompanhar candidatos e vagas em tempo real. Construída com Next.js e React, componentes acessíveis via shadcn/ui e cobertura de testes end-to-end com Playwright.",
+      tags: ["Next.js", "React", "shadcn/ui", "Recharts", "Playwright"],
+      github: "https://github.com/Hluuud/TalentHub",
+      demo: 'https://talent-hub-vexis.vercel.app/',
     },
     {
-      title: "Dashboard de Análise de Rede",
-      description: "Ferramenta de visualização e análise de tráfego de rede com alertas em tempo real.",
-      image: "/network-monitoring-dashboard-dark.jpg",
-      tags: ["Python", "Grafana", "Mikrotik", "API"],
-      github: "https://github.com",
+      title: "Fila de Espera",
+      description:
+        "Sistema de gerenciamento de filas de espera que consulta uma API externa para organizar e acompanhar o atendimento em tempo real, com formulários validados (React Hook Form + Zod) e visualização de dados via Recharts.",
+      tags: ["Next.js", "React Hook Form", "Zod", "API REST"],
+      github: "https://github.com/Hluuud/Fila_de_Espera",
+      demo: null,
+    },
+    {
+      title: "LP Advogados",
+      description:
+        "Landing page institucional para escritório de advocacia, focada em performance e conversão, construída com Next.js e Tailwind CSS, com Vercel Analytics para acompanhar o comportamento dos visitantes.",
+      tags: ["Next.js", "Tailwind CSS", "Vercel Analytics"],
+      github: "https://github.com/Hluuud/lp-advogados",
       demo: null,
     },
   ]
@@ -90,12 +89,11 @@ export function Projects() {
               transition={{ type: "spring", stiffness: 300 }}
               className="group rounded-2xl border-2 border-border bg-card overflow-hidden hover:border-accent hover:shadow-2xl hover:shadow-accent/30 hover:animate-pulse-glow transition-all duration-300"
             >
-              <div className="relative aspect-video overflow-hidden bg-muted">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+              <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-accent/10 to-muted flex flex-col items-center justify-center gap-3 font-mono text-muted-foreground group-hover:from-accent/20 transition-colors duration-500">
+                <TerminalIcon className="w-10 h-10 text-accent/70" />
+                <p className="text-sm px-4 text-center text-pretty">
+                  $ git clone {project.github.replace("https://", "")}
+                </p>
               </div>
 
               <div className="p-6 space-y-4">
@@ -126,7 +124,7 @@ export function Projects() {
                     <Github className="w-5 h-5" />
                     Código
                   </a>
-                  {project.demo && (
+                  {project.demo ? (
                     <a
                       href={project.demo}
                       target="_blank"
@@ -136,6 +134,11 @@ export function Projects() {
                       <ExternalLink className="w-5 h-5" />
                       Demo
                     </a>
+                  ) : (
+                    <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground/50 cursor-default">
+                      <ExternalLink className="w-5 h-5" />
+                      Demo em breve
+                    </span>
                   )}
                 </div>
               </div>

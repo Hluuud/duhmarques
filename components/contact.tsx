@@ -11,19 +11,36 @@ export function Contact() {
     name: "",
     email: "",
     message: "",
+    company: "", // honeypot anti-spam, mantido vazio por usuários reais
   })
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus("sending")
+    setErrorMessage("")
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "Falha ao enviar mensagem.")
+      }
+
       setStatus("success")
-      setFormData({ name: "", email: "", message: "" })
+      setFormData({ name: "", email: "", message: "", company: "" })
       setTimeout(() => setStatus("idle"), 5000)
-    }, 1500)
+    } catch (error) {
+      setStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "Falha ao enviar mensagem.")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -55,6 +72,17 @@ export function Contact() {
           onSubmit={handleSubmit}
           className="space-y-6"
         >
+          <input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            className="absolute -left-[9999px] w-px h-px opacity-0"
+          />
+
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -153,6 +181,17 @@ export function Contact() {
               className="p-4 rounded-lg bg-accent/10 border border-accent/50 text-accent text-sm text-center"
             >
               Mensagem enviada com sucesso! Entrarei em contato em breve.
+            </motion.div>
+          )}
+
+          {status === "error" && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              className="p-4 rounded-lg bg-destructive/10 border border-destructive/50 text-destructive text-sm text-center"
+            >
+              {errorMessage || "Não foi possível enviar sua mensagem. Tente novamente."}
             </motion.div>
           )}
         </motion.form>

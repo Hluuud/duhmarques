@@ -70,7 +70,7 @@ export default function Portfolio() {
       {/* Fixed Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="relative flex items-center justify-between h-16">
             {/* Logo */}
             <button
               onClick={() => scrollToSection("inicio")}
@@ -80,7 +80,7 @@ export default function Portfolio() {
             </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -95,7 +95,7 @@ export default function Portfolio() {
             </div>
 
             {/* Social Links & Theme Toggle */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -112,7 +112,7 @@ export default function Portfolio() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="flex md:hidden items-center gap-3">
+            <div className="flex lg:hidden items-center gap-3">
               <ThemeToggle />
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -127,7 +127,7 @@ export default function Portfolio() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border bg-background">
+          <div className="lg:hidden border-t border-border bg-background">
             <div className="px-4 py-4 space-y-3">
               {navItems.map((item) => (
                 <button
