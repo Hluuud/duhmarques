@@ -10,7 +10,6 @@ Portfólio pessoal de **Luiz Eduardo Marques**, profissional de tecnologia espec
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS 4](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/) para animações
-- [Resend](https://resend.com/) para envio de e-mail do formulário de contato
 - Componentes de UI baseados em [shadcn/ui](https://ui.shadcn.com/) (Radix + `class-variance-authority`)
 
 ## Estrutura
@@ -21,13 +20,14 @@ app/
   layout.tsx           # metadata, fontes (Rajdhani/Space Mono), JSON-LD
   opengraph-image.tsx   # imagem OG gerada dinamicamente
   robots.ts / sitemap.ts
-  api/contact/route.ts  # endpoint que envia o e-mail do formulário via Resend
 components/
   hero.tsx              # hero com terminal simulado (efeito de digitação)
   terminal.tsx          # componente de terminal reutilizável
   about.tsx, skills.tsx, projects.tsx, contact.tsx, footer.tsx
   ui/                   # componentes shadcn/ui
 ```
+
+O formulário de contato ([components/contact.tsx](components/contact.tsx)) não tem backend — ao enviar, monta um link `mailto:` com os dados preenchidos e abre o cliente de e-mail do visitante. Sem API, sem variável de ambiente.
 
 ## Rodando localmente
 
@@ -37,17 +37,6 @@ npm run dev
 ```
 
 Abra [http://localhost:3000](http://localhost:3000).
-
-## Variáveis de ambiente
-
-O formulário de contato ([app/api/contact/route.ts](app/api/contact/route.ts)) envia e-mail via Resend. Copie `.env.example` para `.env.local` e preencha:
-
-```bash
-RESEND_API_KEY=       # chave de API gerada em resend.com
-CONTACT_TO_EMAIL=     # e-mail que vai receber as mensagens do formulário
-```
-
-Sem essas variáveis configuradas, o formulário responde com um erro tratado (não quebra a aplicação).
 
 ## Scripts
 
