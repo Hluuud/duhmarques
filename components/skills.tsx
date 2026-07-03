@@ -30,68 +30,98 @@ export function Skills() {
   const skillCategories = [
     {
       title: "Infraestrutura & Cloud",
+      icon: <Server className="w-5 h-5" />,
       skills: [
-        { name: "Azure & ADDS", icon: <Cloud className="w-6 h-6" /> },
-        { name: "Docker & Kubernetes", icon: <Container className="w-6 h-6" /> },
-        { name: "Linux & Windows Server", icon: <Terminal className="w-6 h-6" /> },
-        { name: "Traefik", icon: <Lock className="w-6 h-6" /> },
-        { name: "Ngrok", icon: <Network className="w-6 h-6" /> },
-        { name: "VMs & Containers", icon: <Boxes className="w-6 h-6" /> },
+        { name: "Docker & Kubernetes", icon: <Container className="w-5 h-5" />, level: "core" as const },
+        { name: "Linux & Windows Server", icon: <Terminal className="w-5 h-5" />, level: "core" as const },
+        { name: "Azure & ADDS", icon: <Cloud className="w-5 h-5" />, level: "core" as const },
+        { name: "VMs & Containers", icon: <Boxes className="w-5 h-5" />, level: "core" as const },
+        { name: "Ngrok", icon: <Network className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Traefik", icon: <Lock className="w-5 h-5" /> },
       ],
     },
-        {
-      title: "Dados & IA",
-      skills: [
-        { name: "Machine Learning", icon: <Brain className="w-6 h-6" /> },
-        { name: "Regressão & Modelagem", icon: <LineChart className="w-6 h-6" /> },
-        { name: "LLM & PLN", icon: <BarChart3 className="w-6 h-6" /> },
-        { name: "RAG", icon: <Cloud className="w-6 h-6" /> },
-        { name: "Chatbots", icon: <Database className="w-6 h-6" /> },
-        { name: "Banco de dados", icon: <Database className="w-6 h-6" /> },
-      ],
-    },
-        {
+    {
       title: "Automação",
+      icon: <Bot className="w-5 h-5" />,
       skills: [
-        { name: "Node-RED", icon: <Network className="w-6 h-6" /> },
-        { name: "N8N", icon: <GitBranch className="w-6 h-6" /> },
-        { name: "Power Automate", icon: <Cpu className="w-6 h-6" /> },
-        { name: "MQTT", icon: <Server className="w-6 h-6" /> },
-        { name: "Ladder", icon: <Bot className="w-6 h-6" /> },
-        { name: "CLPs", icon: <Settings className="w-6 h-6" /> },
+        { name: "Node-RED", icon: <Network className="w-5 h-5" />, level: "core" as const },
+        { name: "N8N", icon: <GitBranch className="w-5 h-5" />, level: "core" as const },
+        { name: "MQTT", icon: <Server className="w-5 h-5" />, level: "core" as const },
+        { name: "Power Automate", icon: <Cpu className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Ladder", icon: <Bot className="w-5 h-5" /> },
+        { name: "CLPs", icon: <Settings className="w-5 h-5" /> },
       ],
     },
     {
       title: "Segurança & Redes",
+      icon: <Shield className="w-5 h-5" />,
       skills: [
-        { name: "Firewall", icon: <Shield className="w-6 h-6" /> },
-        { name: "VLANs & VPNs", icon: <Lock className="w-6 h-6" /> },
-        { name: "Segmentação de redes", icon: <Wifi className="w-6 h-6" /> },
-        { name: "Modelo OSI", icon: <Server className="w-6 h-6" /> },
-        { name: "CFTV", icon: <Camera className="w-6 h-6" /> },
+        { name: "Firewall", icon: <Shield className="w-5 h-5" />, level: "core" as const },
+        { name: "VLANs & VPNs", icon: <Lock className="w-5 h-5" />, level: "core" as const },
+        { name: "Segmentação de redes", icon: <Wifi className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Modelo OSI", icon: <Server className="w-5 h-5" /> },
+        { name: "CFTV", icon: <Camera className="w-5 h-5" /> },
       ],
     },
-      {
-      title: "Programação & Scripts",
+    {
+      title: "Dados & IA",
+      icon: <Brain className="w-5 h-5" />,
       skills: [
-        { name: "Python", icon: <Code className="w-6 h-6" /> },
-        { name: "JavaScript", icon: <GitBranch className="w-6 h-6" /> },
-        { name: "Bash", icon: <Terminal className="w-6 h-6" /> },
-        { name: "PowerShell", icon: <Zap className="w-6 h-6" /> },
-        { name: "APIs REST & Webhooks", icon: <Network className="w-6 h-6" /> },       
+        { name: "RAG", icon: <Cloud className="w-5 h-5" />, level: "core" as const },
+        { name: "Chatbots", icon: <Database className="w-5 h-5" />, level: "core" as const },
+        { name: "Machine Learning", icon: <Brain className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Banco de dados", icon: <Database className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Regressão & Modelagem", icon: <LineChart className="w-5 h-5" /> },
+        { name: "LLM & PLN", icon: <BarChart3 className="w-5 h-5" /> },
+      ],
+    },
+    {
+      title: "Programação & Scripts",
+      icon: <Code className="w-5 h-5" />,
+      skills: [
+        { name: "APIs REST & Webhooks", icon: <Network className="w-5 h-5" />, level: "core" as const },
+        { name: "Python", icon: <Code className="w-5 h-5" />, level: "advanced" as const },
+        { name: "PowerShell", icon: <Zap className="w-5 h-5" />, level: "advanced" as const },
+        { name: "JavaScript", icon: <GitBranch className="w-5 h-5" /> },
+        { name: "Bash", icon: <Terminal className="w-5 h-5" /> },
       ],
     },
     {
       title: "Softwares & Gestão",
+      icon: <Github className="w-5 h-5" />,
       skills: [
-        { name: "Git & GitHub", icon: <Github className="w-6 h-6" /> },
-        { name: "Ansible", icon: <FileCode className="w-6 h-6" /> },
-        { name: "Grafana", icon: <BarChart3 className="w-6 h-6" /> },
-        { name: "Terraform", icon: <Database className="w-6 h-6" /> },
-        { name: "Zabbix", icon: <Shield className="w-6 h-6" /> },
+        { name: "Grafana", icon: <BarChart3 className="w-5 h-5" />, level: "core" as const },
+        { name: "Zabbix", icon: <Shield className="w-5 h-5" />, level: "core" as const },
+        { name: "Git & GitHub", icon: <Github className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Terraform", icon: <Database className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Ansible", icon: <FileCode className="w-5 h-5" /> },
       ],
     },
   ]
+
+  const tierStyles = {
+    core: {
+      width: "92%",
+      bar: "bg-accent",
+      icon: "text-accent",
+      text: "font-semibold text-foreground",
+      badge: true,
+    },
+    advanced: {
+      width: "80%",
+      bar: "bg-accent/70",
+      icon: "text-accent/80",
+      text: "font-medium text-foreground",
+      badge: false,
+    },
+    standard: {
+      width: "55%",
+      bar: "bg-accent/40",
+      icon: "text-muted-foreground",
+      text: "font-medium text-muted-foreground",
+      badge: false,
+    },
+  } as const
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -129,38 +159,62 @@ export function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover={{ y: -4 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="group rounded-2xl border-2 border-border bg-card hover:border-accent hover:shadow-2xl hover:shadow-accent/30 hover:animate-pulse-glow transition-all duration-300"
+              className="rounded-2xl border-2 border-border bg-card overflow-hidden hover:border-accent/60 hover:shadow-2xl hover:shadow-accent/20 transition-all duration-300"
             >
-              <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
-                  {category.title}
-                </h3>
-
-                <div className="space-y-3">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skillIndex}
-                      whileHover={{ scale: 1.05, x: 8 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-accent/10 to-accent/5 hover:from-accent/25 hover:to-accent/15 border border-accent/20 hover:border-accent/50 transition-all duration-300 group/skill cursor-pointer hover:shadow-lg hover:shadow-accent/20"
-                    >
-                      <span className="text-accent group-hover/skill:scale-125 group-hover/skill:animate-spin transition-all duration-300">
-                        {skill.icon}
-                      </span>
-                      <span className="text-lg font-semibold text-foreground group-hover/skill:text-accent transition-colors duration-300">
-                        {skill.name}
-                      </span>
-                    </motion.div>
-                  ))}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-border">
+                <div className="flex items-center gap-3">
+                  <span className="text-accent">{category.icon}</span>
+                  <h3 className="text-lg font-bold font-mono text-foreground">{category.title}</h3>
                 </div>
+                <div className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+                  </span>
+                  {category.skills.length} ferramentas
+                </div>
+              </div>
+
+              <div className="p-6 space-y-5">
+                {category.skills.map((skill, skillIndex) => {
+                  const tier = tierStyles[skill.level ?? "standard"]
+
+                  return (
+                    <div
+                      key={skillIndex}
+                      className="group/skill -mx-3 px-3 py-2 rounded-lg hover:bg-muted/40 transition-colors duration-300"
+                    >
+                      <div className="flex items-center justify-between gap-3 mb-2">
+                        <div className="flex items-center gap-2.5">
+                          <span className={tier.icon}>{skill.icon}</span>
+                          <span className={`text-sm ${tier.text}`}>{skill.name}</span>
+                        </div>
+                        {tier.badge && (
+                          <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30">
+                            Principal
+                          </span>
+                        )}
+                      </div>
+                      <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: tier.width }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.8, delay: skillIndex * 0.05, ease: "easeOut" }}
+                          className={`h-full rounded-full ${tier.bar}`}
+                        />
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             </motion.div>
           ))}

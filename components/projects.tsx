@@ -19,7 +19,7 @@ export function Projects() {
         "Plataforma de gestão de talentos e recrutamento, com dashboards interativos para acompanhar candidatos e vagas em tempo real. Construída com Next.js e React, componentes acessíveis via shadcn/ui e cobertura de testes end-to-end com Playwright.",
       tags: ["Next.js", "React", "shadcn/ui", "Recharts", "Playwright"],
       github: "https://github.com/Hluuud/TalentHub",
-      demo: 'https://talent-hub-vexis.vercel.app/',
+      demo: "https://talent-hub-vexis.vercel.app/",
     },
     {
       title: "Fila de Espera",
@@ -33,9 +33,9 @@ export function Projects() {
       title: "LP Advogados",
       description:
         "Landing page institucional para escritório de advocacia, focada em performance e conversão, construída com Next.js e Tailwind CSS, com Vercel Analytics para acompanhar o comportamento dos visitantes.",
-      tags: ["Next.js", "Tailwind CSS", "Vercel Analytics"],
+      tags: ["Next.js", "Tailwind CSS", "Landing Page"],
       github: "https://github.com/Hluuud/lp-advogados",
-      demo: null,
+      demo: "https://advogados-vexis.vercel.app/",
     },
   ]
 
