@@ -36,7 +36,7 @@ export function Skills() {
         { name: "Linux & Windows Server", icon: <Terminal className="w-5 h-5" />, level: "core" as const },
         { name: "Azure & ADDS", icon: <Cloud className="w-5 h-5" />, level: "core" as const },
         { name: "VMs & Containers", icon: <Boxes className="w-5 h-5" />, level: "core" as const },
-        { name: "Ngrok", icon: <Network className="w-5 h-5" />, level: "advanced" as const },
+        { name: "Nginx", icon: <Network className="w-5 h-5" />, level: "advanced" as const },
         { name: "Traefik", icon: <Lock className="w-5 h-5" /> },
       ],
     },
@@ -49,7 +49,7 @@ export function Skills() {
         { name: "MQTT", icon: <Server className="w-5 h-5" />, level: "core" as const },
         { name: "Power Automate", icon: <Cpu className="w-5 h-5" />, level: "advanced" as const },
         { name: "Ladder", icon: <Bot className="w-5 h-5" /> },
-        { name: "CLPs", icon: <Settings className="w-5 h-5" /> },
+        { name: "Langchain", icon: <Settings className="w-5 h-5" /> },
       ],
     },
     {
@@ -69,17 +69,17 @@ export function Skills() {
       skills: [
         { name: "RAG", icon: <Cloud className="w-5 h-5" />, level: "core" as const },
         { name: "Chatbots", icon: <Database className="w-5 h-5" />, level: "core" as const },
+        { name: "MCP Server", icon: <BarChart3 className="w-5 h-5" />, level: "core" as const },
         { name: "Machine Learning", icon: <Brain className="w-5 h-5" />, level: "advanced" as const },
         { name: "Banco de dados", icon: <Database className="w-5 h-5" />, level: "advanced" as const },
         { name: "Regressão & Modelagem", icon: <LineChart className="w-5 h-5" /> },
-        { name: "LLM & PLN", icon: <BarChart3 className="w-5 h-5" /> },
       ],
     },
     {
       title: "Programação & Scripts",
       icon: <Code className="w-5 h-5" />,
       skills: [
-        { name: "APIs REST & Webhooks", icon: <Network className="w-5 h-5" />, level: "core" as const },
+        { name: "FastAPI", icon: <Network className="w-5 h-5" />, level: "core" as const },
         { name: "Python", icon: <Code className="w-5 h-5" />, level: "advanced" as const },
         { name: "PowerShell", icon: <Zap className="w-5 h-5" />, level: "advanced" as const },
         { name: "JavaScript", icon: <GitBranch className="w-5 h-5" /> },
